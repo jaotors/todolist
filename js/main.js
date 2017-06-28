@@ -57,6 +57,9 @@
   }
 
   var todoInput = document.querySelector('.input-add-todo');
+  todoInput.addEventListener('change', function(event) {
+    console.log(event.target.value)
+  });
   var btnAddTodo = document.querySelector('.input-add');
   var btnDoneTodo = document.querySelector('.input-done');
   var ul = document.querySelector('.todo-list');
