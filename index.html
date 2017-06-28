@@ -3,10 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <title>To-do List</title>
-  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  
-  <script src="js/main.js" type="text/js"></script>
+  <div class="container">
+    <div class="todo-list-app">
+      <h1>To-do List</h1>
+      <div class="todo-container">
+        <div class="todo-input">
+          <input class="input-add-todo" type="text" placeholder="What to do?">
+          <button class="input-add">Submit</button>
+        </div>
+        <div class="todo-body-list">
+          <h2>Todos</h2>
+          <ul class="todo-list"></ul>
+        </div>
+        <ul class="btn-list">
+          <li><button class="input-remove">Remove</button></li>
+          <li><button class="input-done">Done</button></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="js/main.js"></script>
 </body>
 </html>
