@@ -47,8 +47,18 @@
     }
   }
 
+
+
   function todoDone() {
-    let list = docuemnt.querySelector('.todo-list li.check');
+    let list = document.querySelectorAll('input[type="checkbox"]');
+
+    let checkList = list.forEach(function(checkbox) {
+      console.log(checkbox.check);
+      return checkbox.check === true;
+    })
+
+    console.log(checkList);
+    
 
     
     /*let newList = list.map(function(text) {
@@ -64,27 +74,10 @@
   var btnDoneTodo = document.querySelector('.input-done');
   var ul = document.querySelector('.todo-list');
 
-  ul.addEventListener('click', function(event) {
-
-    console.log(event.target)
-
-    /*if (this.classList) {
-      this.classList.toggle('check');
-    } else {
-      var classes = this.className.split(' ');
-      var existingIndex = classes.indexOf('check');
-
-      if (existingIndex >= 0)
-        classes.splice(existingIndex, 1);
-      else
-        classes.push('check');
-
-      this.className = classes.join(' ');
-    }*/
-  });
 
   btnAddTodo.addEventListener('click', addTodo);
   btnDoneTodo.addEventListener('click', todoDone);
+  
   getTodoList();
 
 })();
